@@ -1,5 +1,6 @@
 {
   "imports": {
+    "$flowbite/": "https://raw.githubusercontent.com/khuongduybui/fresh-flowbite/0.0.1-1.5.3/",
     "$fresh/": "https://deno.land/x/fresh@1.1.1/",
     "preact": "https://esm.sh/preact@10.11.0",
     "preact/": "https://esm.sh/preact@10.11.0/",
