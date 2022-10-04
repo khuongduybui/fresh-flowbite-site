@@ -1,6 +1,6 @@
 {
   "imports": {
-    "$flowbite/": "https://raw.githubusercontent.com/khuongduybui/fresh-flowbite/0.0.1-1.5.3/",
+    "$flowbite/": "https://raw.githubusercontent.com/khuongduybui/fresh-flowbite/0.0.2-1.5.3/",
     "$fresh/": "https://deno.land/x/fresh@1.1.1/",
     "$turnstile/": "https://raw.githubusercontent.com/khuongduybui/fresh-turnstile/0.0.2-0/",
     "dotenv/": "https://deno.land/std@0.158.0/dotenv/",

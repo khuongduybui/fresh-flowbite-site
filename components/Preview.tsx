@@ -6,17 +6,7 @@ export type PreviewProps = JSX.HTMLAttributes<HTMLElement> & {
   href?: string;
   linkText?: string;
 };
-export default function Preview(
-  {
-    class: extraClass,
-    children,
-    header,
-    href,
-    linkText = "View plugin",
-    sourceCode,
-    ...props
-  }: PreviewProps,
-) {
+export default function Preview({ class: extraClass, children, header, href, linkText = "View Plugin", sourceCode, ...props }: PreviewProps) {
   return (
     <section {...props} class={"border rounded-lg m-4 p-4" + extraClass ?? ""}>
       <div class="flex m-4">
