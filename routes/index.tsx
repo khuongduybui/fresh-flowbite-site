@@ -1,7 +1,7 @@
 import Page from "$flowbite/components/Page.tsx";
 import Button from "$flowbite/components/Button.tsx";
-import GithubIcon from "../../fresh-flowbite/components/icons/Github.tsx";
-import SolidIcon from "../../fresh-flowbite/components/icons/_Solid.tsx";
+import GithubIcon from "$flowbite/components/icons/Github.tsx";
+import SolidIcon from "$flowbite/components/icons/_Solid.tsx";
 
 import CfTurnstileForm from "../islands/CfTurnstileForm.tsx";
 import Preview from "../components/Preview.tsx";
