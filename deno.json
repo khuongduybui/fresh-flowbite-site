@@ -1,4 +1,9 @@
 {
+  "fmt": {
+    "options": {
+      "lineWidth": 160
+    }
+  },
   "tasks": {
     "start": "deno run -A --watch=static/,routes/ dev.ts"
   },
