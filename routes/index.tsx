@@ -1,15 +1,14 @@
-import CfTurnstile from "$turnstile/components/CfTurnstile.tsx";
 import Page from "$flowbite/components/Page.tsx";
 import Button from "$flowbite/components/Button.tsx";
 
+import CfTurnstileForm from "../islands/CfTurnstileForm.tsx";
 import Preview from "../components/Preview.tsx";
 
 export default function Home() {
   const pageCode = `<Page [title="Page Title"]>...</Page>`;
   const pagePreview = (
     <Preview header="<Page/>" sourceCode={pageCode}>
-      There is no preview for a page. It simply puts title into head and classes
-      on body.
+      There is no preview for a page. It simply puts title into head and classes on body.
     </Preview>
   );
 
@@ -34,7 +33,10 @@ export default function Home() {
     </Preview>
   );
 
-  const cfTurnstileCode = `<CfTurnstile sitekey="..." />`;
+  const cfTurnstileCode = `<form action="..." method="POST">
+  <CfTurnstile sitekey="..." />
+  <Button type="submit" variant="primary">Validate</Button>
+</form>`;
   const cfTurnstileSitekey = Deno.env.get("CfTurnstile_Sitekey");
   const cfTurnstilePreview = cfTurnstileSitekey && (
     <Preview
@@ -42,7 +44,7 @@ export default function Home() {
       sourceCode={cfTurnstileCode}
       href="https://github.com/khuongduybui/fresh-turnstile"
     >
-      <CfTurnstile sitekey={cfTurnstileSitekey} />
+      <CfTurnstileForm sitekey={cfTurnstileSitekey} />
     </Preview>
   );
 
