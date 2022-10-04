@@ -11,8 +11,12 @@ import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 
 import { FlowbitePlugin } from "$flowbite/index.ts";
+import { TurnstilePlugin } from "$turnstile/index.ts";
 
-await start(manifest, { plugins: [
-  twindPlugin(twindConfig),
-  FlowbitePlugin(),
-] });
+await start(manifest, {
+  plugins: [
+    twindPlugin(twindConfig),
+    FlowbitePlugin(),
+    TurnstilePlugin(),
+  ],
+});

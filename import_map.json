@@ -2,6 +2,7 @@
   "imports": {
     "$flowbite/": "https://raw.githubusercontent.com/khuongduybui/fresh-flowbite/0.0.1-1.5.3/",
     "$fresh/": "https://deno.land/x/fresh@1.1.1/",
+    "$turnstile/": "https://raw.githubusercontent.com/khuongduybui/fresh-turnstile/0.0.1-0/",
     "preact": "https://esm.sh/preact@10.11.0",
     "preact/": "https://esm.sh/preact@10.11.0/",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.4",
