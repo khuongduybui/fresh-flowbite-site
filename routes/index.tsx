@@ -46,6 +46,20 @@ export default function Home() {
     </Preview>
   );
 
+  const cfTurnstileExplicitCode = `useTurnstileEffect((turnstile) => {
+  turnstile.render("#explicit", { sitekey: ... });
+});
+
+<form action="..." method="POST">
+  <div id="explicit"></div>
+  <Button type="submit" variant="primary">Validate</Button>
+</form>`;
+  const cfTurnstileExplicitPreview = cfTurnstileSitekey && (
+    <Preview header="useTurnstileEffect()" sourceCode={cfTurnstileExplicitCode} href="https://github.com/khuongduybui/fresh-turnstile">
+      <CfTurnstileForm sitekey={cfTurnstileSitekey} explicit={true} />
+    </Preview>
+  );
+
   const iconCode = `<SolidIcon [class="inline"]><path d="..." /></SolidIcon>`;
   const iconPreview = (
     <Preview header="<SolidIcon/>" sourceCode={iconCode} href="https://github.com/khuongduybui/fresh-flowbite">
@@ -91,6 +105,7 @@ export default function Home() {
         {iconsPreview}
         <hr class="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
         {cfTurnstilePreview}
+        {cfTurnstileExplicitPreview}
       </div>
     </Page>
   );
