@@ -36,8 +36,9 @@ export default function Home() {
   );
 
   const cfTurnstileCode = `<form action="..." method="POST">
-  <CfTurnstile sitekey="..." />
+  <CfTurnstile sitekey="..." callback={(token) => response.value = token} />
   <Button type="submit" variant="primary">Validate</Button>
+  <pre>{response}</pre>
 </form>`;
   const cfTurnstileSitekey = Deno.env.get("CfTurnstile_Sitekey");
   const cfTurnstilePreview = cfTurnstileSitekey && (
@@ -46,14 +47,16 @@ export default function Home() {
     </Preview>
   );
 
-  const cfTurnstileExplicitCode = `useTurnstileEffect((turnstile) => {
-  turnstile.render("#explicit", { sitekey: ... });
+  const cfTurnstileExplicitCode = `const divId = useId();
+const response = useSignal("Waiting for validation...");
+useTurnstileEffect((turnstile) => {
+  turnstile.render("#" + divId, { sitekey, callback: (token) => response.value = token });
 });
 
-<form action="..." method="POST">
-  <div id="explicit"></div>
-  <Button type="submit" variant="primary">Validate</Button>
-</form>`;
+<section>
+  <div id={divId}></div>
+  <pre>{response}</pre>
+</section>`;
   const cfTurnstileExplicitPreview = cfTurnstileSitekey && (
     <Preview header="useTurnstileEffect()" sourceCode={cfTurnstileExplicitCode} href="https://github.com/khuongduybui/fresh-turnstile">
       <CfTurnstileForm sitekey={cfTurnstileSitekey} explicit={true} />
