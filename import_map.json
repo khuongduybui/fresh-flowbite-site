@@ -2,7 +2,7 @@
   "imports": {
     "$flowbite/": "https://raw.githubusercontent.com/khuongduybui/fresh-flowbite/0.0.2-1.5.3/",
     "$fresh/": "https://deno.land/x/fresh@1.1.1/",
-    "$logging/": "https://deno.land/x/fresh_logging@0.0.2/",
+    "$logging/": "https://deno.land/x/fresh_logging@1.0.0/",
     "$turnstile/": "https://deno.land/x/fresh_turnstile@1.0.0-0/",
     "dotenv/": "https://deno.land/std@0.158.0/dotenv/",
     "preact": "https://esm.sh/preact@10.11.0",
