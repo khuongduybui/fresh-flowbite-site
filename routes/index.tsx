@@ -1,8 +1,7 @@
-import Page from "$flowbite/components/Page.tsx";
-import Button from "$flowbite/components/Button.tsx";
 import GithubIcon from "$flowbite/components/icons/Github.tsx";
 import SolidIcon from "$flowbite/components/icons/_Solid.tsx";
 
+import Buttons from "../islands/Buttons.tsx";
 import CfTurnstileForm from "../islands/CfTurnstileForm.tsx";
 import Preview from "../components/Preview.tsx";
 
@@ -10,7 +9,7 @@ export default function Home() {
   const pageCode = `<Page [title="Page Title"]>...</Page>`;
   const pagePreview = (
     <Preview header="<Page/>" sourceCode={pageCode} href="https://github.com/khuongduybui/fresh-flowbite">
-      There is no preview for a page. It simply puts title into head and classes on body.
+      There is no preview for a page. It simply puts title into head and classes on body. You can put it in <code>_app.tsx</code> for convenience.
     </Preview>
   );
 
@@ -23,15 +22,8 @@ export default function Home() {
 <Button type="button" variant="green">Primary</Button>
 <Button type="button" variant="purple">Primary</Button>`;
   const buttonPreview = (
-    <Preview header="<Button/>" sourceCode={buttonCode} href="https://github.com/khuongduybui/fresh-flowbite">
-      <Button type="button">Default</Button>
-      <Button type="button" variant="primary">Primary</Button>
-      <Button type="button" variant="dark">Primary</Button>
-      <Button type="button" variant="light">Primary</Button>
-      <Button type="button" variant="red">Primary</Button>
-      <Button type="button" variant="yellow">Primary</Button>
-      <Button type="button" variant="green">Primary</Button>
-      <Button type="button" variant="purple">Primary</Button>
+    <Preview header="<Button/>" island={true} sourceCode={buttonCode} href="https://github.com/khuongduybui/fresh-flowbite">
+      <Buttons />
     </Preview>
   );
 
@@ -42,7 +34,7 @@ export default function Home() {
 </form>`;
   const cfTurnstileSitekey = Deno.env.get("CfTurnstile_Sitekey");
   const cfTurnstilePreview = cfTurnstileSitekey && (
-    <Preview header="<CfTurnstile/>" sourceCode={cfTurnstileCode} href="https://github.com/khuongduybui/fresh-turnstile">
+    <Preview header="<CfTurnstile/>" island={true} sourceCode={cfTurnstileCode} href="https://github.com/khuongduybui/fresh-turnstile">
       <CfTurnstileForm sitekey={cfTurnstileSitekey} />
     </Preview>
   );
@@ -58,7 +50,7 @@ useTurnstileEffect((turnstile) => {
   <pre>{response}</pre>
 </section>`;
   const cfTurnstileExplicitPreview = cfTurnstileSitekey && (
-    <Preview header="useTurnstileEffect()" sourceCode={cfTurnstileExplicitCode} href="https://github.com/khuongduybui/fresh-turnstile">
+    <Preview header="useTurnstileEffect()" island={true} sourceCode={cfTurnstileExplicitCode} href="https://github.com/khuongduybui/fresh-turnstile">
       <CfTurnstileForm sitekey={cfTurnstileSitekey} explicit={true} />
     </Preview>
   );
@@ -86,30 +78,28 @@ useTurnstileEffect((turnstile) => {
   );
 
   return (
-    <Page title="Documentation for Fresh Flowbite">
-      <div class="p-4 mx-auto max-w-screen-lg">
-        <div>
-          <p>This site is a demo / docs page for my various Deno Fresh plugins. Source codes for the site as well as those plugins are all MIT-licensed.</p>
-          <p class="pt-4">
-            <a
-              href="https://github.com/khuongduybui/fresh-flowbite-site"
-              class="inline-flex items-center text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
-              target="_blank"
-            >
-              <GithubIcon class="mr-1" />
-              View Site on GitHub
-            </a>
-          </p>
-        </div>
-        <hr class="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
-        {pagePreview}
-        {buttonPreview}
-        {iconPreview}
-        {iconsPreview}
-        <hr class="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
-        {cfTurnstilePreview}
-        {cfTurnstileExplicitPreview}
-      </div>
-    </Page>
+    <>
+      <header>
+        <p>This site is a demo / docs page for my various Deno Fresh plugins. Source codes for the site as well as those plugins are all MIT-licensed.</p>
+        <p class="pt-4">
+          <a
+            href="https://github.com/khuongduybui/fresh-flowbite-site"
+            class="inline-flex items-center text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
+            target="_blank"
+          >
+            <GithubIcon class="mr-1" />
+            View Site on GitHub
+          </a>
+        </p>
+      </header>
+      <hr class="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      {pagePreview}
+      {buttonPreview}
+      {iconPreview}
+      {iconsPreview}
+      <hr class="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      {cfTurnstilePreview}
+      {cfTurnstileExplicitPreview}
+    </>
   );
 }

@@ -2,8 +2,6 @@ import { PageProps } from "$fresh/server.ts";
 
 import { CfTurnstileValidationResult, generatePostHandler } from "$turnstile/handlers/CfTurnstileValidation.ts";
 
-import Page from "$flowbite/components/Page.tsx";
-
 export const handler = { POST: generatePostHandler(Deno.env.get("CfTurnstile_SecretKey")) };
 
 export default function CfTurnstileValidation({ data }: PageProps<CfTurnstileValidationResult | null>) {
@@ -29,11 +27,5 @@ export default function CfTurnstileValidation({ data }: PageProps<CfTurnstileVal
       Please use the Turnstile validate form from the <a href="/" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">main page</a>.
     </div>
   );
-  return (
-    <Page title="Server-Validation Demo for Fresh Turnstile">
-      <div class="p-4 mx-auto max-w-screen-lg">
-        {data ? (data.success ? success : failure) : emptyData}
-      </div>
-    </Page>
-  );
+  return data ? (data.success ? success : failure) : emptyData;
 }
