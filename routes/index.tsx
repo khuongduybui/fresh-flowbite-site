@@ -1,3 +1,4 @@
+import ChipIcon from "$flowbite/components/icons/Chip.tsx";
 import GithubIcon from "$flowbite/components/icons/Github.tsx";
 import SolidIcon from "$flowbite/components/icons/_Solid.tsx";
 
@@ -70,10 +71,12 @@ useTurnstileEffect((turnstile) => {
     </Preview>
   );
 
-  const iconsCode = `<GithubIcon [class="inline"] />`;
+  const iconsCode = `<GithubIcon [class="inline"] />
+<ChipIcon class="inline" />`;
   const iconsPreview = (
     <Preview header="Icons" sourceCode={iconsCode} href="https://github.com/khuongduybui/fresh-flowbite">
       <GithubIcon class="inline" />
+      <ChipIcon class="inline" />
     </Preview>
   );
 
