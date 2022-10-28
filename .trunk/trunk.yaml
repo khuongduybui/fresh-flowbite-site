@@ -54,7 +54,7 @@ lint:
   enabled:
     - prettier@2.7.1
     - svgo@3.0.0
-    - cspell@6.12.0
+    - cspell@6.13.1
     - deno-ts
     - deno-md
     - deno-json
