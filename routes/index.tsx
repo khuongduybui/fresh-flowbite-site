@@ -80,6 +80,25 @@ useTurnstileEffect((turnstile) => {
     </Preview>
   );
 
+  const grammarlyCode = `<grammarly-editor-plugin>
+  <Head>
+    <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=..."></script>
+  </Head>
+  <textarea/>
+</grammarly-editor-plugin>`;
+  const grammarlyPreview = (
+    <Preview header="<grammarly-editor-plugin/>" sourceCode={grammarlyCode} href="https://developer.grammarly.com/docs/editor-sdk-intro#script-tag">
+      <grammarly-editor-plugin>
+        <textarea
+          rows={4}
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        >
+          This sentence contains a spelling eror and a grammar ones.
+        </textarea>
+      </grammarly-editor-plugin>
+    </Preview>
+  );
+
   return (
     <>
       <header>
@@ -103,6 +122,8 @@ useTurnstileEffect((turnstile) => {
       <hr class="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
       {cfTurnstilePreview}
       {cfTurnstileExplicitPreview}
+      <hr class="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      {grammarlyPreview}
     </>
   );
 }
