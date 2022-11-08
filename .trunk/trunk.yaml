@@ -54,7 +54,7 @@ lint:
   enabled:
     - prettier@2.7.1
     - svgo@3.0.0
-    - cspell@6.13.1
+    - cspell@6.14.1
     - deno-ts
     - deno-md
     - deno-json
@@ -66,5 +66,5 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v0.0.5
+      ref: v0.0.6
       uri: https://github.com/trunk-io/plugins
