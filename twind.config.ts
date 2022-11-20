@@ -1,5 +1,7 @@
-import { Options } from "$fresh/plugins/twind.ts";
+import { FreshwindUserConfig } from "freshwind/shared.ts";
+import presetTailwind from "@twind/preset-tailwind";
 
 export default {
   selfURL: import.meta.url,
-} as Options;
+  presets: [presetTailwind()],
+} as FreshwindUserConfig;

@@ -4,13 +4,15 @@
     "$logging/": "https://deno.land/x/fresh_logging@1.1.2/",
     "$turnstile/": "https://deno.land/x/fresh_turnstile@1.0.0-0/",
     "dotenv/": "https://deno.land/std@0.158.0/dotenv/",
+    "freshwind/": "https://deno.land/x/freshwind@3.0.0/",
     "$fresh/": "https://deno.land/x/fresh@1.1.2/",
-    "preact": "https://esm.sh/preact@10.11.0",
-    "preact/": "https://esm.sh/preact@10.11.0/",
+    "preact": "https://esm.sh/preact@10.11.3",
+    "preact/": "https://esm.sh/preact@10.11.3/",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.4",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.0.3",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
-    "twind": "https://esm.sh/twind@0.16.17",
-    "twind/": "https://esm.sh/twind@0.16.17/"
+    "twind": "https://esm.sh/twind@1.0.1",
+    "twind/": "https://esm.sh/twind@1.0.1/",
+    "@twind/preset-tailwind": "https://esm.sh/@twind/preset-tailwind@1.0.1/"
   }
 }
