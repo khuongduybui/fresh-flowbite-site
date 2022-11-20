@@ -1,7 +1,8 @@
-import { FreshwindUserConfig } from "freshwind/shared.ts";
+import { defineConfig } from "@twind/core";
 import presetTailwind from "@twind/preset-tailwind";
 
-export default {
-  selfURL: import.meta.url,
+export default defineConfig({
   presets: [presetTailwind()],
-} as FreshwindUserConfig;
+});
+
+export const configURL = import.meta.url;
