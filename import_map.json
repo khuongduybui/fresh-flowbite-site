@@ -1,6 +1,6 @@
 {
   "imports": {
-    "$flowbite/": "https://deno.land/x/fresh_flowbite@0.1.0-1.5.4/",
+    "$flowbite/": "https://deno.land/x/fresh_flowbite@1.0.0-1.6.0/",
     "$logging/": "https://deno.land/x/fresh_logging@1.1.2/",
     "$turnstile/": "https://deno.land/x/fresh_turnstile@1.0.0-0/",
     "dotenv/": "https://deno.land/std@0.158.0/dotenv/",
@@ -11,8 +11,8 @@
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.4",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.0.3",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
-    "@twind/core": "https://esm.sh/@twind/core@1.0.1",
-    "@twind/core/": "https://esm.sh/@twind/core@1.0.1/",
-    "@twind/preset-tailwind": "https://esm.sh/@twind/preset-tailwind@1.0.1/"
+    "@twind/core": "https://esm.sh/@twind/core@1.1.2",
+    "@twind/core/": "https://esm.sh/@twind/core@1.1.2/",
+    "@twind/preset-tailwind": "https://esm.sh/@twind/preset-tailwind@1.1.2/"
   }
 }
