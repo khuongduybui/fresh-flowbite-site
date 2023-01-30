@@ -1,6 +1,6 @@
 {
   "imports": {
-    "$flowbite/": "https://deno.land/x/fresh_flowbite@1.0.0-1.6.2/",
+    "$flowbite/": "https://deno.land/x/fresh_flowbite@1.0.0-1.6.3/",
     "$logging/": "https://deno.land/x/fresh_logging@1.1.2/",
     "$turnstile/": "https://deno.land/x/fresh_turnstile@1.0.0-0/",
     "dotenv/": "https://deno.land/std@0.158.0/dotenv/",
