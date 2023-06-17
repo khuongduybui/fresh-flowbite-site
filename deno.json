@@ -15,7 +15,7 @@
     "$flowbite/": "https://deno.land/x/fresh_flowbite@1.0.0-1.6.6/",
     "$logging/": "https://deno.land/x/fresh_logging@1.1.2/",
     "$turnstile/": "https://deno.land/x/fresh_turnstile@1.0.0-0/",
-    "dotenv/": "https://deno.land/std@0.158.0/dotenv/",
+    "$std/": "https://deno.land/std@0.158.0/",
     "freshwind/": "https://deno.land/x/freshwind@4.0.0/",
     "$fresh/": "https://deno.land/x/fresh@1.2.0/",
     "preact": "https://esm.sh/preact@10.15.1",
