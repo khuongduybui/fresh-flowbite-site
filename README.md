@@ -8,10 +8,18 @@ Populate `.env`
 
 Start the project:
 
-```
+```sh
 deno task start
 ```
 
 This will watch the project directory and restart as necessary.
 
 In order for Turnstile to work, access the website at http://fresh-flowbite.localhost.direct:8000/.
+
+## Development
+
+Run tests locally:
+
+```sh
+deno test --no-check --allow-all
+```
